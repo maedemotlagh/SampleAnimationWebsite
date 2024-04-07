@@ -1,0 +1,49 @@
+.navbar{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 32px;
+    height: 73px;
+    background-color: blueviolet;
+
+    &__menuItems{
+        padding: 0;
+        width: 568px;
+        list-style: none;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+        }
+    }
+
+    &__logo{
+        display: inline-block;
+        width: 63px;
+        justify-self: center;
+        align-self: center;
+
+        svg{
+            width: 63px;
+
+            path{
+                fill: white;
+            }
+        }
+    }
+
+    &__btn{
+        justify-self: flex-end;
+        align-self: center;
+        padding: 12px 25px;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 100px;
+    }
+}
