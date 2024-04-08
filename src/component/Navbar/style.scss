@@ -1,9 +1,17 @@
+@font-face {
+    font-family: "HarmoniaSans" ;
+    src: url(../../font/HarmoniaSansProCyr-SemiBd.woff);
+}
+
 .navbar{
+    font-family: "HarmoniaSans" ;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 0 32px;
     height: 73px;
-    background-color: blueviolet;
+    background-color: transparent;
+    position: fixed;
+    z-index: 99;
 
     &__menuItems{
         padding: 0;
@@ -16,7 +24,7 @@
         a{
             text-decoration: none;
             color: white;
-            font-size: 17px;
+            font-size: 16px;
         }
     }
 
@@ -38,7 +46,7 @@
     &__btn{
         justify-self: flex-end;
         align-self: center;
-        padding: 12px 25px;
+        padding: 12px 20px;
         background-color: white;
         color: black;
         cursor: pointer;

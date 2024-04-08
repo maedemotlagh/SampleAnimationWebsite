@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "RecoletaAlt" ;
+    src: url(../../../font/RecoletaAlt-Medium.woff);
+}
+
+@font-face {
+    font-family: "HarmoniaSans" ;
+    src: url(../../../font/HarmoniaSansProCyr-SemiBd.woff);
+}
+
+.features{
+    h1{
+        font-family: "HarmoniaSans";
+    }
+
+    p{
+        font-family: "RecoletaAlt";
+    }
+}
