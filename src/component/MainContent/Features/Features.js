@@ -11,11 +11,18 @@ const Features = () => {
     const mainDesc = "Vegan and cruelty free certified products to respect the environment and nature , obtained with energy produced from sources renewable." 
     return(
         <div className="features" >
-            <div className="features" >
+            <div className="features__imgBox1" >  
+                <EmojSvg/>
+                <img src="img/curlyhaire.jpg" />
+            </div>
+            <div className="features__text" >
                 <h1>{mainTitle}</h1>
                 <p>{mainDesc}</p>
             </div>
-           
+            <div className="features__imgBox2" >
+                <img src="img/bargsabz.jpg"/>
+                <img src="img/people.jpg"/>
+            </div>
         </div>
     )
 }

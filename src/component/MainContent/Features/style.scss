@@ -1,19 +1,97 @@
 @font-face {
-    font-family: "RecoletaAlt" ;
-    src: url(../../../font/RecoletaAlt-Medium.woff);
+    font-family: "RecoletaAltBold" ;
+    src: url(../../../font/RecoletaAlt-SemiBold.woff);
 }
 
 @font-face {
-    font-family: "HarmoniaSans" ;
+    font-family: "HarmoniaSansBold" ;
     src: url(../../../font/HarmoniaSansProCyr-SemiBd.woff);
 }
 
 .features{
-    h1{
-        font-family: "HarmoniaSans";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__imgBox1{
+        display: flex;
+        position: absolute;
+        left: 0;
+        
+        img{
+            width: 160px;
+            height: 240px;
+            border-radius: 25px;
+
+        }
+
+        svg{
+            width: 80px;
+            height: 82px;
+            border-radius: 25px;
+
+
+            circle{
+                fill: #d2f179;
+            }
+
+            path{
+                fill: #f0b9e9;
+            }
+
+            ellipse{
+                fill: #f0b9e9;
+            }
+        }
+    }
+    
+    &__text{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 9;
+
+        h1{
+            font-family: "HarmoniaSansBold";
+            color: #5C0F8B;
+            font-size: 60px;
+            margin: 0;
+        }
+    
+        p{
+            font-family: "RecoletaAltBold";
+            text-align: center;
+            margin: 0;
+            margin-top: 20px;
+            font-size: 55px;
+            max-width: 920px;
+            line-height: 1.2;
+            color: #150F3D;
+        }
     }
 
-    p{
-        font-family: "RecoletaAlt";
+    &__imgBox2{
+        display: flex;
+        direction: rtl;
+        position: absolute;
+        right: 0;
+        
+        img{
+            &:first-child{
+                width: 112px;
+                height: 158px;
+                border-radius: 25px;
+            }
+
+            &:last-child{
+                width: 240px;
+                height: 165px;
+                border-radius: 25px;
+            }
+        }
     }
+    
 }
