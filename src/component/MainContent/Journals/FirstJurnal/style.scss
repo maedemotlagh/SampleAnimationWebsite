@@ -1,0 +1,85 @@
+
+@font-face {
+    font-family: "HarmoniaSansregular" ;
+    src: url(../../../../font/HarmoniaSansProCyr-Regular.woff);
+}
+
+@font-face {
+    font-family: "HarmoniaSansSemibold" ;
+    src: url(../../../../font/HarmoniaSansProCyr-SemiBd.woff);
+}
+
+@font-face {
+    font-family: "RecoletaAltBold" ;
+    src: url(../../../../font/RecoletaAlt-Bold.woff);
+}
+
+.firstContainer{
+    display: flex;
+    direction: rtl;
+    width: 90%;
+    margin: auto;
+    background: #ff7b3a;
+    padding: 73px 0;
+    border-radius: 45px;
+
+    &__contentText{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+        &__title{
+            color: white;
+            font-family: 'RecoletaAltBold';
+            font-size: 50px;
+            width: 330px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        p{
+            color: white;
+            font-family: 'HarmoniaSansregular';
+            width: 261px;
+            font-size: 17px;
+            text-align: left;
+            direction: ltr;
+            line-height: 1.4;
+            margin-bottom: 35px;
+        }
+
+        button{
+            width: 156px;
+            height: 42px;
+            border-radius: 25px;
+            font-family: "HarmoniaSansSemibold";
+            font-size : 18px;
+            background: #d2f179;
+            border: 2px solid #d2f179;
+            transition: all .56s ease;
+            cursor: pointer;
+            
+            
+            &:hover{
+                background: #f19f4d;
+            }
+
+        }
+    }
+
+
+    &__img{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 480px;
+            height:480px;
+            border-radius: 50%;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+
+@font-face {
+    font-family: "HarmoniaSansSemiBold" ;
+    src: url(../../../../font/HarmoniaSansProCyr-SemiBd.woff);
+}
+
+.bottomContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+   .mainContentBottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 576px;
+    margin: auto;
+    margin-top: 50px;
+
+
+        img{
+            width: 120px;
+            height: 120px;
+        }
+    } 
+
+    button{
+        margin-top: 45px;
+        width: 156px;
+        height: 42px;
+        border-radius: 35px;
+        border: 2px solid #d2f179;
+        background: #d2f179;
+        color: #232323;
+        font-family: "HarmoniaSansSemiBold";
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        transition: all .56s ease;
+
+        &:hover{
+            background: #eff8d4;
+
+        }
+    }
+}
