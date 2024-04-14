@@ -2,6 +2,7 @@ import React from "react";
 import './mainStyle.scss';
 import Features from "./Features/Features";
 import Journals from "./Journals/Journals";
+import ContactUs from "./ContactUs/ContactUs";
 
 
 const MainContent = () => {
@@ -9,6 +10,7 @@ const MainContent = () => {
         <div className="mainContainer" >
             <Features/>
             <Journals/>
+            <ContactUs/>
         </div>
     )
 }

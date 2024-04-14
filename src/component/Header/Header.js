@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './style.scss'
 
 
@@ -11,17 +11,27 @@ const Header = () => {
     const ButtonLeftText = "Discover more"
     const ButtonRightText = "View video"
 
+    const [animate , setAnimate] = useState(false)
+
+
+
+    useEffect(() => {
+        setAnimate(true)
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0
+
+    },[])
 
     return(
         <div className="header" >
             <div class="header__left" >
-                <div className="header__left__topSvg" >
+                <div className={` ${animate && 'activeAnimate'} header__left__topSvg`} >
                     <SvgGol/>
                 </div>
                 <div className="header__left__bottomSvg">
                     <SvgSabz/>
                 </div>
-                <div className="header__left__content" >
+                <div className={`${animate && 'activedescAnimate'} header__left__content`} >
                     <span className="header__left__title" >
                         <HeaderText/>
                     </span>
@@ -34,7 +44,7 @@ const Header = () => {
                 
             </div>
             <div class="header__right" >
-                <img src="img/girlPink.jpg" />
+                <img className={animate && 'activeImg'} src="img/girlPink.jpg" />
             </div>
         </div>
     )

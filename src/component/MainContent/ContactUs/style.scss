@@ -1,0 +1,109 @@
+
+
+@font-face {
+    font-family: "RecoletaAltBold" ;
+    src: url(../../../font/RecoletaAlt-SemiBold.woff);
+}
+
+.contactUs{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & > p{
+        font-size: 65px;
+        font-family: "RecoletaAltBold";
+        color: #150F3D;
+    }
+
+    &__input{
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+
+        input{
+            width: 395px;
+            height:60px;
+            border-radius: 35px;
+            border: 2px solid #d2f179;
+            padding: 0 20px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: 0;
+
+
+            &::placeholder{
+                font-size: 16px;
+            }
+
+            &:focus{
+                border: 2px solid #d2f179 !important;
+            }
+        }
+
+
+        &__svg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 80px;
+            border-radius: 35px;
+            border: 2px solid #d2f179;
+            border-left: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            cursor: pointer;
+
+            svg{
+                width: 20px;
+                height: 20px;
+                fill: #a36de2;
+            }
+        }
+    }
+
+    &__radio{
+        label{
+            span{
+                &:last-child{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .ant-radio-wrapper{
+            &:hover{
+                .ant-radio-inner{
+                    border-color: #d2f179;
+                }
+            }
+        }
+
+        .ant-radio-inner{
+            border-color: #d2f179;
+            border-width: 2px;
+
+            &:hover{
+                border-color: #d2f179;
+            }
+        }
+
+        .ant-radio-input{
+            &:hover{
+                border-color: #d2f179;
+            }
+        }
+
+        .ant-radio-checked{
+            .ant-radio-inner{
+                border-color: #d2f179;
+                background-color: #d2f179;
+            }
+            
+        }
+    }
+}
+

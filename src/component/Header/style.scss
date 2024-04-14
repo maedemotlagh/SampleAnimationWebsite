@@ -27,8 +27,15 @@
             display: inline-block;
             width: 120%;
             left: -5%;
-            transform: rotate(-35deg);
+            transform: rotate(35deg);
             z-index: 5;
+            opacity: 0;
+            transition: all 1.5s ease;
+
+            &.activeAnimate {
+                opacity: 1;
+                transform: rotate(-35deg);
+            }
 
             svg{
                 path {
@@ -59,6 +66,16 @@
             flex-direction: column;
             justify-content: center;
             padding-left:5vw ;
+            opacity: 0;
+            transition: all 1s ease;
+            transition-delay: 1.5s;
+            scale: .9;
+
+            &.activedescAnimate{
+                opacity: 1;
+                scale: 1;
+
+            }
         }
 
         &__title{
@@ -122,9 +139,25 @@
 
     &__right{
         width: 50%;
+        background: #3236b4;
+        
+        
 
         img{
             width: 100%;
+            scale: 0;
+            opacity: 0;
+            transition: all 2s ease;
+
+            &.activeImg{
+                scale: 1;
+                opacity: 1;
+
+            }
         }
     }
 }
+
+
+
+

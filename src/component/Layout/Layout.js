@@ -3,6 +3,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
 import MainContent from "../MainContent/MainContent";
+import Footer from "../Footer/Footer";
 
 const Layout = () => {
   return (
@@ -15,6 +16,9 @@ const Layout = () => {
       </Routes>
       <Routes>
         <Route path="/" element={<MainContent/>} />
+      </Routes>
+      <Routes>
+        <Route path="/" element={<Footer/>} />
       </Routes>
     </BrowserRouter>
   );

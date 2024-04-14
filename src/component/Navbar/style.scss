@@ -25,6 +25,11 @@
             text-decoration: none;
             color: white;
             font-size: 16px;
+            transition: all .55s ease;
+
+            &.activeChange{
+                color: #5C0F8B;
+            }
         }
     }
 
@@ -39,6 +44,15 @@
 
             path{
                 fill: white;
+                transition: all .55s ease;
+            }
+        }
+
+        &.activeChange{
+            svg{
+                path{
+                    fill: #5C0F8B;
+                }
             }
         }
     }
@@ -53,5 +67,11 @@
         font-size: 17px;
         font-weight: 700;
         border-radius: 100px;
+        transition: all .55s ease;
+
+        &.activeChange{
+            background-color: #5C0F8B;
+            color: white;
+        }
     }
 }

@@ -1,0 +1,66 @@
+
+@font-face {
+    font-family: "HarmoniaSansReg" ;
+    src: url(../../font/HarmoniaSansProCyr-Regular.woff);
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    padding-bottom: 15px;
+
+
+
+    &__messages{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p{
+            font-family: "HarmoniaSansReg";
+            color: #150F3D;
+
+            &:first-child{
+                margin: 0;
+            }
+
+            
+        }
+
+        span{
+            font-size: 12px;
+            font-family: "HarmoniaSansReg";
+            color: #150F3D;
+        }
+    }
+
+    &__socialMedia{
+        display: flex;
+
+        span{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #a36de2;
+            cursor: pointer;
+
+            &:last-child{
+                background-color: #d2f179;
+                margin-left: 10px;
+            }
+
+
+
+            svg{
+                width: 20px;
+                fill: #5c0f8b;
+            }
+
+        }
+    }
+}
