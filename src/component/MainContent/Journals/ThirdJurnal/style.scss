@@ -39,6 +39,16 @@
             color: white;
             width: 430px;
             line-height: 1.2;
+            opacity: 0;
+            position: relative;
+            top: 26px;
+            transition: all 1.5s ease;
+            transition-delay: 1s;
+
+            &.activeTitleThree{
+                top: 0px;
+                opacity: 1;
+            }
         }
 
         p{
@@ -48,6 +58,16 @@
             margin: 30px 0;
             width: 328px;
             font-size: 17px;
+            opacity: 0;
+            position: relative;
+            top: 26px;
+            transition: all 1.5s ease;
+            transition-delay: 1.3s;
+
+            &.activeDescThree{
+                top: 0px;
+                opacity: 1;
+            }
 
         }
 
@@ -61,7 +81,13 @@
             font-family: "HarmoniaSansSemiBold";
             font-size: 18px;
             transition : all .56s ease;
+            transition-delay: 2s;
+            opacity: 0;
             cursor: pointer;
+
+            &.activeBtnThree{
+                opacity: 1;
+            }
 
             &:hover{
                 background-color: #e7cac8;
@@ -75,10 +101,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
 
         img{
             width: 100%;
             border-radius: 45px;
+            scale: 1.5;
+            transition: all 1s ease ;
+            // transition-delay: s;
+        }
+
+        &.animateImgThree{
+            img{
+                scale: 1;
+            }
         }
     }
 }

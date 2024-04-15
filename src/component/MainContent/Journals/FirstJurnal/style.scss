@@ -36,7 +36,17 @@
             font-size: 50px;
             width: 330px;
             text-align: left;
+            position: relative;
             margin-bottom: 10px;
+            top: 26px;
+            opacity: 0;
+            transition: all 1.5s ease;
+            transition-delay: .56s;
+
+            &.animateTitle{
+                top: 0px;
+                opacity: 1;
+            }
         }
 
         p{
@@ -48,6 +58,16 @@
             direction: ltr;
             line-height: 1.4;
             margin-bottom: 35px;
+            position: relative;
+            top: 26px;
+            opacity: 0;
+            transition: all 1.5s ease;
+            transition-delay: 1s;
+
+            &.animateDesc{
+                top: 0px;
+                opacity: 1;
+            }
         }
 
         button{
@@ -57,9 +77,15 @@
             font-family: "HarmoniaSansSemibold";
             font-size : 18px;
             background: #d2f179;
+            opacity: 0;
             border: 2px solid #d2f179;
             transition: all .56s ease;
+            transition-delay: 1.5s;
             cursor: pointer;
+
+            &.animateBtn{
+                opacity: 1;
+            }
             
             
             &:hover{
@@ -80,6 +106,18 @@
             width: 480px;
             height:480px;
             border-radius: 50%;
+            opacity: 0;
+            scale: .7;
+            transition: all 1.5s ease;
+            
+        }
+
+        &.activeJournalAnimate{
+            img{
+                opacity: 1;
+                scale: 1;
+
+            }
         }
     }
 }
