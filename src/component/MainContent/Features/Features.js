@@ -11,7 +11,7 @@ const EmojSvg = () => <svg version="1.1"  x="0px" y="0px" viewBox="0 0 136 136" 
 const Features = () => {
 
     const [movepointer , setMovepointer] = useState(0)
-    const [direction , setDirection] = useState('center')
+    const [direction , setDirection] = useState('center') 
 
     useEffect(() => {
         const myComponent = document.querySelector('#featuresContainer')
