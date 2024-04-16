@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './style.scss'
 import { useState } from "react";
 import BottomContent from "./BottomContent/BottomContent";
@@ -11,25 +11,44 @@ const EmojSvg = () => <svg version="1.1"  x="0px" y="0px" viewBox="0 0 136 136" 
 const Features = () => {
 
     const [movepointer , setMovepointer] = useState(0)
+    const [direction , setDirection] = useState('center')
 
-    document.body.addEventListener("pointermove" , (e) => {
-        if(e.movementX < 0 && e.movementY == 0){
-            setMovepointer(movepointer + 1)
-           
-            
-        }else if(e.movementX > 0 && e.movementY == 0){
-            setMovepointer(movepointer - 1 )
+    useEffect(() => {
+        const myComponent = document.querySelector('#featuresContainer')
+        myComponent.addEventListener("mousemove", handleComponentMouseMove);
+    },[])
+
+    let previousMouseX = 0
+
+    const handleComponentMouseMove = (e) => {
+        const currentMouseX = e.clientX;
+        
+        // Calculate the difference in X-axis coordinates
+        const deltaX = currentMouseX - previousMouseX;
+
+        if (deltaX > 0) {
+            setTimeout(() => {
+                setMovepointer(currentMouseX)
+                setDirection('right')
+            },700)
+        } else if (deltaX < 0) {
+            setTimeout(() => {
+                setMovepointer(currentMouseX)
+                setDirection('left')
+            },700)
         }
-    })
+        // Update the previous mouse position
+        previousMouseX = currentMouseX;
+    }
 
-    // console.log(movepointer , 'movepointer');
+    
 
     const mainTitle = "ETHICAL AND SUSTAINABLE"
     const mainDesc = "Vegan and cruelty free certified products to respect the environment and nature , obtained with energy produced from sources renewable." 
     return(
         <>
-            <div className="features" >
-                <div className="features__imgBox1" >  
+            <div id="featuresContainer" className="features" >
+                <div className="features__imgBox1" style={{left : direction === "left" ?  movepointer : direction === "center" ? '215px' : movepointer-1}} >  
                     <EmojSvg/>
                     <img src="img/curlyhaire.jpg" />
                 </div>
@@ -37,7 +56,7 @@ const Features = () => {
                     <h1>{mainTitle}</h1>
                     <p>{mainDesc}</p>
                 </div>
-                <div className="features__imgBox2" >
+                <div className="features__imgBox2" style={{right : direction === "right" ? movepointer : direction === "center" ? "155px" : movepointer-1}}>
                     <img src="img/bargsabz.jpg"/>
                     <img src="img/people.jpg"/>
                 </div>
