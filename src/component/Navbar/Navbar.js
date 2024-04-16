@@ -10,27 +10,33 @@ const Logo = () => <svg version="1.1"  x="0px" y="0px" viewBox="0 0 300 173.5"><
 const menuObject = [
     {
         title : 'About Us',
-        link:'#'
+        link:'/About_Us',
+        download : false
     },
     {
         title : 'Prodotti',
-        link:'#'
+        link:'/Prodotti',
+        download : false
     },
     {
         title : 'Sustainability',
-        link:'#'
+        link:'/Sustainability',
+        download : false
     },
     {
         title : 'Professionals',
-        link:'#'
+        link:'/Professionals',
+        download : false
     },
     {
         title : 'Blog',
-        link:'#'
+        link:'/blog',
+        download : false
     },
     {
         title : 'Catalog',
-        link:'#'
+        link: "./flipBook.pdf",
+        download : true
     }
 ]
 
@@ -60,7 +66,7 @@ const Navbar = () => {
                 {
                     menuObject.map(menu => 
                         <li>
-                            <a className={activeChange && 'activeChange'} href={menu.link}>{menu.title}</a>
+                            <a download={menu.download} className={activeChange && 'activeChange'} href={menu.link}>{menu.title}</a>
                         </li>
                     )
                 }
