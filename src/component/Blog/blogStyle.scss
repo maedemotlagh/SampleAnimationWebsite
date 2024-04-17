@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "RecoletaAltSemiBold" ;
+    src: url(../../font/RecoletaAlt-SemiBold.woff);
+}
+
+.blog{
+    padding-top: 140px;
+
+    h2{
+        text-align: center;
+        font-family: "RecoletaAltSemiBold" ;
+        font-size: 80px;
+        margin-top: 0;
+        color: #150F3D;
+    }
+
+    &__itemsContainer{
+        &__item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }    
+}

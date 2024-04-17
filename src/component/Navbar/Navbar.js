@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './style.scss'
 
 
@@ -48,17 +48,33 @@ const Navbar = () => {
     const [activeChange , setActiveChange] = useState(false)
     const handleScroll = () => {
         var x = document.documentElement.scrollTop
-        
         if( x >= 700){
             setActiveChange(true)
+            if(window.location.href.includes('/blog') || window.location.href.includes('/About_Us') ||
+                window.location.href.includes('/Prodotti') || window.location.href.includes('/Sustainability')||
+                window.location.href.includes('/Professionals')){
+                setActiveChange(true)
+            }
         }else if(x < 700){
             setActiveChange(false)
+            if(window.location.href.includes('/blog') || window.location.href.includes('/About_Us') ||
+                window.location.href.includes('/Prodotti') || window.location.href.includes('/Sustainability')||
+                window.location.href.includes('/Professionals')){
+                setActiveChange(true)
+            }
         }
         
     }
 
     window.addEventListener("scroll", handleScroll);
 
+    useEffect(() => {
+        if(window.location.href.includes('/blog') || window.location.href.includes('/About_Us') ||
+           window.location.href.includes('/Prodotti') || window.location.href.includes('/Sustainability')||
+           window.location.href.includes('/Professionals')){
+            setActiveChange(true)
+           }
+    },[])
 
     return(
         <nav className="navbar" >
