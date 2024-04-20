@@ -9,19 +9,20 @@ const Blog = () => {
     const [loading , setLoading] = useState(true)
 
     const BlogTitle = "Blog"
-
+// https://reqres.in/api/users
     useEffect(() => {
-        fetch('https://reqres.in/api/users')
+        fetch('https://picsum.photos/200/300')
           .then((res) => {
             return res.json();
           })
           .then((response) => {
-            setData(response.data)
-            setLoading(false)
+            console.log(response , 'response');
+            // setData(response.data)
+            // setLoading(false)
           });
       }, []);
 
-      console.log(data , 'data');
+      
 
     return(
         <div className="blog">
@@ -47,8 +48,11 @@ const Blog = () => {
                     <div className="blog__itemsContainer__item" >
                         {data.map(blog => 
                             <div className="blog__itemsContainer__item__content">
-                                <img src={blog.avatar} />
-                                <div>    
+                                <div className="blog__itemsContainer__item__content__img" >
+                                    <img src={blog.avatar} />
+                                </div>
+                                
+                                <div className="blog__itemsContainer__item__content__desc" >    
                                     <p>{blog.first_name + ' ' + blog.last_name}</p>
                                     <span>{blog.email}</span>
                                 </div>

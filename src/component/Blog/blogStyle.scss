@@ -20,6 +20,17 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+
+            &__content{
+                &__img{
+                    width: 442px;
+                    height: 555px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+            }
         }
     }    
 }
