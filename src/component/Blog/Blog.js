@@ -1,6 +1,7 @@
 import { Col, Row, Skeleton } from "antd";
 import React, { useEffect, useState } from "react";
 import "./blogStyle.scss";
+import Slider from "react-slick";
 
 
 const Blog = () => {
@@ -9,18 +10,29 @@ const Blog = () => {
     const [loading , setLoading] = useState(true)
 
     const BlogTitle = "Blog"
-// https://reqres.in/api/users
+
     useEffect(() => {
-        fetch('https://picsum.photos/200/300')
+        fetch('https://reqres.in/api/users')
           .then((res) => {
             return res.json();
           })
           .then((response) => {
-            console.log(response , 'response');
-            // setData(response.data)
-            // setLoading(false)
+            setData(response.data)
+            setLoading(false)
           });
       }, []);
+
+
+      const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 4000,
+        autoplaySpeed: 2000,
+        cssEase: "linear"
+      };
 
       
 
@@ -44,26 +56,49 @@ const Blog = () => {
                     </Row>
 
                     :
-
+                    <>
                     <div className="blog__itemsContainer__item" >
-                        {data.map(blog => 
-                            <div className="blog__itemsContainer__item__content">
-                                <div className="blog__itemsContainer__item__content__img" >
-                                    <img src={blog.avatar} />
-                                </div>
-                                
-                                <div className="blog__itemsContainer__item__content__desc" >    
-                                    <p>{blog.first_name + ' ' + blog.last_name}</p>
-                                    <span>{blog.email}</span>
-                                </div>
-                            </div>        
-                        )}
+                        <Slider {...settings} >
+                            {data.map(item =>
+                                <a  href="#" className="blog__itemsContainer__item__items" >
+                                    <div className="blog__itemsContainer__item__items__img" >
+                                        <img src={item.avatar} alt="can't load" />
+                                    </div>
+                                    <div className="blog__itemsContainer__item__items__desciription" >
+                                        <p>{item.first_name + ' ' + item.last_name}</p>
+                                        <span>{item.email}</span>
+                                    </div>
+                                </a>
+                            )
+                            }
+                        </Slider>
                     </div>
+                    <Product/>
+                    </>
                 }
             </div>
         </div>
     )
 }
 
+
+
+const Product = () => {
+
+    const productTitle = "Styling and nourishment"
+    const productContent = "A range of products perfect for creating all types of hair styling with restructuring, nourishing and plumping action. A blend of organic and biological oils enriched with a Rice Bran Oil for forever young-looking hair. Free of Parabens, Paraffine, Silicones, Petrolatum, Sulfates, SLES and SLS."
+
+    return(
+        <div className="product" >
+            <div className="product__image" >
+                <img src="img/product.jpg" alt="product" />
+            </div>
+            <div className="product__content" >
+                <span>{productTitle}</span>
+                <p>{productContent}</p>
+            </div>
+        </div>
+    )
+}
 
 export default Blog
