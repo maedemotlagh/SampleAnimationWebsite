@@ -106,3 +106,35 @@
     }
     
 }
+
+@media (max-width : 992px) {
+    .features{
+        &__text{
+            h1{
+                font-size: 35px;
+            }
+
+            p{
+                font-size: 32px;
+                max-width: 480px;
+            }
+        }
+
+        &__imgBox1{
+            left: 60px !important;
+        }
+
+        &__imgBox2{
+            display: none;
+        }
+    }
+}
+@media (max-width : 715px) {
+    .features{
+    
+        &__imgBox1{
+            display: none;
+        }
+       
+    }
+}

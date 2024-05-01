@@ -66,3 +66,14 @@
         }
     }
 }
+
+
+@media(max-width : 710px){
+    .footer{
+        flex-direction: column;
+
+        &__socialMedia{
+            margin-top: 15px;
+        }
+    }
+}

@@ -159,5 +159,34 @@
 }
 
 
+@media(max-width : 1285px){
+    .header__left__bottomSvg{
+        display: none;
+    }
+}
+
+
+@media(max-width : 1135px){
+    .header__left__title{
+        width: 400px;
+    }
+}
+
+@media(max-width : 900px){
+    .header{
+        flex-direction: column-reverse;
+
+        &__left{
+            width: 100%;
+            padding: 110px 0;
+        }
+
+        &__right{
+            width: 100%;
+        }
+    }
+}
+
+
 
 

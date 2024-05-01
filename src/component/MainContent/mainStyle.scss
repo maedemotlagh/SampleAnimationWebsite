@@ -8,3 +8,16 @@
     padding-top: 75px;
     padding-bottom: 55px;
 }
+
+@media(max-width : 1285px){
+    .mainContainer{
+        top: -102px;
+    }
+}  
+
+
+@media(max-width : 900px){
+    .mainContainer{
+        top: 0px;
+    }
+} 

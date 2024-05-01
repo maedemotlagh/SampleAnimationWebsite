@@ -118,3 +118,37 @@
         }
     }
 }
+
+
+
+@media(max-width : 1060px){
+    .thirdContainer__left {
+        span{
+            width: 100%;
+            font-size: 40px;
+        }
+    }    
+}
+
+@media(max-width : 992px){
+    .thirdContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        &__left{
+            width: 100%;
+
+            & > div{
+                padding: 125px 0;
+            }
+        }
+
+        &__right{
+            width: 100%;
+            height: 600px;
+            border-radius: 45px;
+            margin-bottom: 20px;
+        }
+    }    
+}

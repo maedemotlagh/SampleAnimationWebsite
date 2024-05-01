@@ -121,3 +121,32 @@
         }
     }
 }
+
+
+@media(max-width : 1126px){
+    .firstContainer__img{
+        img{
+            width: 350px;
+            height: 350px;
+        }
+    }
+}
+
+@media(max-width : 820px){
+    .firstContainer{
+        flex-direction: column-reverse;
+        align-items: center;
+
+        &__contentText{
+            width: 80%;
+
+            &__title{
+                width: 100%;
+            }
+
+            p{
+                width: 100%;
+            }
+        }
+    }
+}

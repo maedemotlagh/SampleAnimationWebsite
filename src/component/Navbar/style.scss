@@ -5,8 +5,12 @@
 
 .navbar{
     font-family: "HarmoniaSans" ;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:  95%;
     padding: 0 32px;
     height: 73px;
     background-color: transparent;
@@ -31,6 +35,10 @@
                 color: #5C0F8B;
             }
         }
+    }
+
+    &__mobileMenu{
+        display: none;
     }
 
     &__logo{
@@ -72,6 +80,52 @@
         &.activeChange{
             background-color: #5C0F8B;
             color: white;
+        }
+    }
+}
+
+
+
+@media(max-width : 1024px){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:  95%;
+    }
+}
+
+@media(max-width : 1214px){
+    .navbar{
+        &__menuItems{
+            width: 500px;
+        }
+    }
+}
+
+@media(max-width : 992px){
+    .navbar{
+        &__menuItems{
+            display: none;
+        }
+
+        &__logo{
+            display: none;
+        }
+
+        &__btn{
+            display: none;
+        }
+
+        &__mobileMenu{
+            display: inline-block;
+            svg{
+                width: 35px;
+
+                path{
+                    fill: white;
+                }
+            }
         }
     }
 }
