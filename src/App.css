@@ -26,6 +26,6 @@
 
 
 
-/* .App{
-    font-family : 'HarmoniaSans' ;
-} */
+.App{
+    display: inline-block;
+}

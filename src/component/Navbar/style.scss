@@ -5,8 +5,7 @@
 
 .navbar{
     font-family: "HarmoniaSans" ;
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,7 +122,7 @@
                 width: 35px;
 
                 path{
-                    fill: white;
+                    fill: #8f57ba;
                 }
             }
         }
